@@ -1,11 +1,19 @@
 {
-  "name": "funky-csv",
+  "name": "@funkybob/csv",
   "version": "0.0.1",
   "description": "Simple CSV generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funkybob/funky-csv.git"
+  },
   "author": "Curtis Maloney",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/funkybob/funky-csv/issues"
+  },
+  "homepage": "https://github.com/funkybob/funky-csv#readme"
 }
