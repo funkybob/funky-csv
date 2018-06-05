@@ -1,5 +1,5 @@
 
-class CSVWriter {
+export class CSVWriter {
 	constructor (fields, headers, options) {
 		options = Object.assign({SEP: ',', QUOTE: '"', LINEBREAK: '\n'}, options);
 		let {SEP, QUOTE, LINEBREAK, ESCQUOTE} = options;
