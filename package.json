@@ -1,6 +1,6 @@
 {
   "name": "@funkybob/csv",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple CSV generator",
   "main": "index.js",
   "scripts": {
