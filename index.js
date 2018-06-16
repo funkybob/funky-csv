@@ -3,19 +3,11 @@ export class CSVWriter {
 	constructor (fields, headers, options) {
 		options = Object.assign({SEP: ',', QUOTE: '"', LINEBREAK: '\n'}, options);
 		let {SEP, QUOTE, LINEBREAK, ESCQUOTE} = options;
-		
-		if (ESCQUOTE !== undefined) {
-			let QUOTEre = new RegExp(QUOTE, 'g')
-			this.escape_field = (value) => {
-				return value.toString().replace(QUOTEre, ESCQUOTE)
-			}
-		} else {
-			this.escape_field = (value) => {
-				if (value.indexOf(SEP) !== -1) {
-					return QUOTE + value + QUOTE
-				}
-				return value
-			}
+
+		let QUOTEre = new RegExp(QUOTE, 'g')
+		this.escape_field = (value) => {
+			value = value.toString().replace(QUOTEre, ESCQUOTE || '""')
+			return (value.indexOf(SEP) === -1) ? value : QUOTE + value + QUOTE
 		}
 		if (headers === undefined) {
 			headers = fields
