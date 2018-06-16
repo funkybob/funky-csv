@@ -6,7 +6,7 @@ export class CSVWriter {
 
 		let QUOTEre = new RegExp(QUOTE, 'g')
 		this.escape_field = (value) => {
-			value = value.toString().replace(QUOTEre, ESCQUOTE || '""')
+			value = (value || '').toString().replace(QUOTEre, ESCQUOTE || '""')
 			return (value.indexOf(SEP) === -1) ? value : QUOTE + value + QUOTE
 		}
 		if (headers === undefined) {

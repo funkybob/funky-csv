@@ -20,6 +20,8 @@ Overview
 
    - write list of values
 
+     Note: this ignores `fields`, and writes all the values to a row.
+
    csv.write\_map(Object)
 
    - write values from object according to fields.

@@ -62,4 +62,21 @@ describe('CSV', () => {
 		assert.equal(output, '"bo,b",42\n')
 	})
 
+	describe('#write_map()', () => {
+
+		let data = [
+			{name: 'one', age: 1},
+			{name: 'two', age: 2},
+			{name: 'three', age: 3}
+		]
+
+		let output = csv.write_headers() + data.map(r => csv.write_map(r)).join('');
+
+		assert.equal(output, 'Name,Age\n' +
+			'one,1\n' +
+			'two,2\n' +
+			'three,3\n'
+		)
+
+	})
 })
