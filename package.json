@@ -1,6 +1,6 @@
 {
   "name": "@funkybob/csv",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple CSV generator",
   "browser": "src/index.js",
   "scripts": {
@@ -24,7 +24,9 @@
     "source": "./src",
     "destination": "./docs",
     "plugins": [
-      {"name": "esdoc-standard-plugin"}
+      {
+        "name": "esdoc-standard-plugin"
+      }
     ]
   }
 }
