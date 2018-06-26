@@ -1,15 +1,15 @@
-
-/**
- * @desc CSV generator
- * @param {Array<String>} fields - List of field keys
- * @param {Object} [options]
- * @param {Array<String>} [options.headers] - Field headings
- * @param {String} [options.SEP] - Field separator (Default: ',')
- * @param {String} [options.QUOTE] - Field quote character (Default: '"')
- * @param {String} [options.LINEBREAK] - Record separator (Default: '\n')
- * @param {String} [options.ESCQUOTE] - Character to replace QUOTE with when in value (Default: '""')
- */
 export class CSVWriter {
+
+	/**
+ 	 * @desc CSV generator
+ 	 * @param {Array<String>} fields - List of field keys
+ 	 * @param {Object} [options]
+ 	 * @param {Array<String>} [options.headers] - Field headings
+ 	 * @param {String} [options.SEP] - Field separator (Default: ',')
+ 	 * @param {String} [options.QUOTE] - Field quote character (Default: '"')
+ 	 * @param {String} [options.LINEBREAK] - Record separator (Default: '\n')
+ 	 * @param {String} [options.ESCQUOTE] - Character to replace QUOTE with when in value (Default: '""')
+ 	*/
 	constructor (fields, options) {
 		options = Object.assign({SEP: ',', QUOTE: '"', LINEBREAK: '\n'}, options);
 		let {SEP, QUOTE, LINEBREAK, ESCQUOTE, headers} = options;

@@ -1,4 +1,4 @@
-import {CSVWriter} from './index.js';
+import {CSVWriter} from './src/index.js';
 
 const output = document.querySelector('dl');
 
