@@ -6,11 +6,11 @@ Overview
 
     import {CSVWriter} from '@funkybob/csv';
 
-    const csv = CSVWriter(fields, [headers], [options])
+    const csv = CSVWriter(fields, [options])
 
  - fields: list of field keys
- - headers: list of header labels for the fields (Defaults to fields)
  - options:
+   - headers: list of header labels for the fields (Defaults to fields)
    - SEP : field separator (Default: ',')
    - QUOTE : field quoting character (Default: '"')
    - LINEBREAK : record separator (Default: '\n')
